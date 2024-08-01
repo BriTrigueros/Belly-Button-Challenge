@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTU Dashboard</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #dashboard {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #plots, #metadata {
+            margin: 20px;
+        }
+        #bar, #bubble {
+            width: 600px;
+            height: 400px;
+        }
+        #sample-metadata {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>OTU Dashboard</h1>
+    <div>
+        <label for="selDataset">Select a Sample:</label>
+        <select id="selDataset"></select>
+    </div>
+    <div id="dashboard">
+        <div id="plots">
+            <div id="bar"></div>
+            <div id="bubble"></div>
+        </div>
+        <div id="metadata">
+            <h2>Sample Metadata</h2>
+            <div id="sample-metadata"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
